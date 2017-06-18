@@ -1,17 +1,20 @@
 var selectElement = require('./index.js');
 
+// Use this from node
+// var selectElement = require('select-element');
+
 var options = {
     'test': 'Here is a test',
     'test2': 'here is another test with '
 };
 
 //            
-selectElement(
+var s = new selectElement(
     'select-id', // id to append the select list to
     'select-list-id', // id of the select list
     options,  // key value object of options
     'test2' // selected key
 );    
 
-s.create(); // creates the element depends on document
-s.getAsString(); // Returns select-id element as string
+// s.create(); // creates the element, depends on document
+// s.getAsString(); // Returns select-id element as string
