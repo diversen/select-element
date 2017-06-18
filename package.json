@@ -1,0 +1,25 @@
+{
+  "name": "select-element",
+  "version": "1.0.0",
+  "description": "Simple node module to create HTML select elements",
+  "main": "index.js",
+  "scripts": {
+    "test": "test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diversen/select-element.git"
+  },
+  "keywords": [
+    "html",
+    "select",
+    "element",
+    "create"
+  ],
+  "author": "dennis iversen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/diversen/select-element/issues"
+  },
+  "homepage": "https://github.com/diversen/select-element#readme"
+}
