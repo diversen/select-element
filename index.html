@@ -1,0 +1,45 @@
+<body>
+    <div id="select-id"></div>
+    <script src="dist/select-element.js"></script>
+    <script>
+        
+// Use this from node
+// var selectElement = require('select-element');
+
+// Create some options
+var options = {
+    'Select': 'Select',
+    'test': 'Here is a test',
+    'test2': 'here is another test with '
+};
+
+//            
+var s = new selectElement(
+    'select-id',        // id to append the select list to
+    'select-list-id',   // id of the select list
+    options,            // key value object of options
+    'test'              // selected key
+);    
+
+// Insert into DOM
+s.create();
+
+// Opdate an select element with some options
+var optionsUpdate = {
+    'test': 'Here is a test',
+    'test2': 'here is another test with ',
+    'test3': 'And another option',
+    'test4': 'And last option '
+};
+
+// Update DOM select element with options
+s.update(
+        'select-list-id', // id of the select list
+        optionsUpdate,    // key value object of options
+        'test3'           // selected key
+);
+
+console.log(s.getSelected('select-list-id'))
+
+    </script>
+</body>
