@@ -4,15 +4,23 @@ function selectElement(appendToID, selectID, options, selected) {
     this.selectID = selectID;
     this.options = options;
     this.selected = selected;
+
+    this.selectList;
     
-    this.create = function() {
+    this.create = function(cb) {
         var appendToID = document.getElementById(this.appendToID);
-        var selectList = document.createElement("select");
-        selectList.id = this.selectID;        
-        appendToID.appendChild(selectList);
+        this.selectList = document.createElement("select");
+        this.selectList.id = this.selectID;        
+        appendToID.appendChild(this.selectList);
         this.update(selectID, this.options, this.selected);
     };
-    
+
+    this.onChange = function (cb) {
+        this.selectList.addEventListener('change', function(){
+            cb(this.value)
+        });
+    }
+
     this.update = function (elem, options, selected) {
         this.delete(elem);
         var selectList = document.getElementById(elem);

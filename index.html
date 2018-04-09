@@ -24,6 +24,13 @@ var s = new selectElement(
 // Insert into DOM
 s.create();
 
+/**
+ * On select change set a callback function 
+ */ 
+s.onChange (function (key) {
+    console.log(key)
+})
+
 // Opdate an select element with some options
 var optionsUpdate = {
     'test': 'Here is a test',
